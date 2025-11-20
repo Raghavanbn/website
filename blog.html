@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Blog</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    background:#f9f9f9;
+    color:#333;
+  }
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Our Blog</h1>
+  <p>Tips, stories, and insights from the world of tech, software, and business.</p>
+</header>
+
+<div class="category-filters">
+  <button class="active" onclick="filterCategory('all')">All</button>
+  <button onclick="filterCategory('Insurance')">Insurance</button>
+  <button onclick="filterCategory('Banking')">Banking</button>
+  <button onclick="filterCategory('Healthcare')">Healthcare</button>
+  <button onclick="filterCategory('Media')">Media</button>
+  <button onclick="filterCategory('Retail')">Retail</button>
+</div>
+
+<div class="blog-container">
+
+  <!-- Banking -->
+  <div class="blog-card" data-category="Banking">
+    <div class="category">Banking</div>
+    <h3>The Secret Behind Smooth Online Transactions</h3>
+    <div class="excerpt"><p>You click “Send Money”… and you wait.</p></div>
+    <div class="full-content">
+      <div class="text">
+        <p>And wait.</p>
+        <p>Sometimes you hold your breath… </p>
+        <p>because some banking systems still run on old technology <br/>that struggles with today’s speed and traffic.</p>
+        <p>The good news?</p>
+        <p>A few smart upgrades—<br/>like optimized APIs and better database handling <br/>can make everything feel instant.</p>
+        <p>Fast banking isn’t just nice to have anymore.</p>
+        <p>It’s expected. And the banks that get this right win customer loyalty without even trying.</p>
+      </div>
+      <div class="image">
+        <img src="banking.jpg" alt="Banking Illustration">
+      </div>
+    </div>
+    <div class="read-more" onclick="toggleBlog(this)">Read More ▼</div>
+  </div>
+
+  <!-- Retail -->
+  <div class="blog-card" data-category="Retail">
+    <div class="category">Retail</div>
+    <h3>How Stores Always Know What’s In Stock</h3>
+    <div class="excerpt"><p>You add something to your cart… and boom, “Out of stock.”</p></div>
+    <div class="full-content">
+      <div class="text">
+        <p>Retail inventory systems keep track of stock in real time.</p>
+        <ul>
+          <li>track stock across multiple locations</li>
+          <li>update numbers instantly</li>
+          <li>prevent out-of-stock surprises</li>
+          <li>make smarter ordering decisions</li>
+        </ul>
+        <p>Real-time inventory isn’t just cool—it keeps customers happy and businesses profitable.</p>
+      </div>
+      <div class="image">
+        <img src="retail.jpg" alt="Retail Illustration">
+      </div>
+    </div>
+    <div class="read-more" onclick="toggleBlog(this)">Read More ▼</div>
+  </div>
+
+  <!-- Insurance -->
+  <div class="blog-card" data-category="Insurance">
+    <div class="category">Insurance</div>
+    <h3>Why Claims Processing Needs a Digital Upgrade</h3>
+    <div class="excerpt"><p>Filing insurance claims can be stressful.</p></div>
+    <div class="full-content">
+      <div class="text">
+        <p>Imagine a world where:</p>
+        <ul>
+          <li>customers upload documents online</li>
+          <li>agents get instant notifications</li>
+          <li>systems check details automatically</li>
+          <li>claims move faster</li>
+        </ul>
+        <p>Yep, that world exists—and companies using modern tech are already enjoying smoother workflows and happier customers.</p>
+        <p>The faster and cleaner claims are processed, the better everyone sleeps at night.</p>
+      </div>
+      <div class="image">
+        <img src="insurance.jpg" alt="Insurance Illustration">
+      </div>
+    </div>
+    <div class="read-more" onclick="toggleBlog(this)">Read More ▼</div>
+  </div>
+
+  <!-- Healthcare -->
+  <div class="blog-card" data-category="Healthcare">
+    <div class="category">Healthcare</div>
+    <h3>Why Digital Records Make Life Easier</h3>
+    <div class="excerpt"><p>Digital patient records speed up check-ins and reduce mistakes.</p></div>
+    <div class="full-content">
+      <div class="text">
+        <p>Digital records solve many problems:</p>
+        <ul>
+          <li>faster check-ins</li>
+          <li>cleaner data</li>
+          <li>fewer mistakes</li>
+          <li>doctors get info instantly</li>
+          <li>patients get better care</li>
+        </ul>
+        <p>It’s not just about “going digital.”</p>
+        <p>It’s about letting healthcare professionals do what they do best—help patients—instead of chasing paperwork.</p>
+      </div>
+      <div class="image">
+        <img src="healthcare.jpg" alt="Healthcare Illustration">
+      </div>
+    </div>
+    <div class="read-more" onclick="toggleBlog(this)">Read More ▼</div>
+  </div>
+
+  <!-- Media -->
+  <div class="blog-card" data-category="Media">
+    <div class="category">Media</div>
+    <h3>What Really Happens During a Viral Content Spike</h3>
+    <div class="excerpt"><p>High traffic spikes can crash platforms—but scalable architecture keeps media live.</p></div>
+    <div class="full-content">
+      <div class="text">
+        <p>Ever wondered what apps go through when a video suddenly hits 1 million views in an hour?</p>
+        <p>Spoiler: it’s chaos… unless the platform is built to scale.</p>
+        <p>During big moments, servers get stressed, databases get cranky, and apps sometimes decide to take a nap.</p>
+        <p>But with the right tech—like</p>
+        <ul>
+            <li>caching,</li>
+            <li>CDN magic, and</li>
+            <li>scalable architecture</li>
+        </ul> 
+        <p>media platforms can handle massive traffic without breaking a sweat.</p>
+        <p>Good tech = uninterrupted streams.</p>
+        <p>Bad tech = “Playback error. Please try again.”</p>
+      </div>
+      <div class="image">
+        <img src="media.jpg" alt="Media Illustration">
+      </div>
+    </div>
+    <div class="read-more" onclick="toggleBlog(this)">Read More ▼</div>
+  </div>
+
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
