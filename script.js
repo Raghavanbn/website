@@ -60,7 +60,8 @@ const heroPhrases = [
   "Innovating Tomorrow, Today",
   "Transforming Ideas into Impact",
   "Where Innovation Meets Excellence",
-  "Innovate. Create. Lead."
+  "Innovate. Create. Lead.",
+  "Creativity Meets Code"
 ];
 
 let heroIndex = 0;
@@ -104,4 +105,71 @@ function scrollToTop() {
   });
 }
 
+function toggleBlog(el){
+  const card = el.parentElement;
+  const full = card.querySelector('.full-content');
+  const allCards = document.querySelectorAll('.blog-card');
+  const buttons = document.querySelectorAll('.category-filters button');
 
+  if(full.classList.contains('expanded')){
+    full.classList.remove('expanded');
+    el.innerText = 'Read More ▼';
+    allCards.forEach(c => c.style.display = 'block');
+    buttons.forEach(b => b.classList.remove('active'));
+    buttons[0].classList.add('active');
+  } else {
+    allCards.forEach(c => {
+      if(c !== card) c.style.display='none';
+      const f = c.querySelector('.full-content');
+      f.classList.remove('expanded');
+      c.querySelector('.read-more').innerText='Read More ▼';
+    });
+    full.classList.add('expanded');
+    el.innerText='Read Less ▲';
+
+    const category = card.dataset.category;
+    buttons.forEach(b=>b.classList.remove('active'));
+    buttons.forEach(b=>{ if(b.innerText===category) b.classList.add('active'); });
+  }
+}
+
+function filterCategory(category){
+  const allCards = document.querySelectorAll('.blog-card');
+  const buttons = document.querySelectorAll('.category-filters button');
+  buttons.forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+  allCards.forEach(c=>{
+    if(category==='all' || c.dataset.category===category) c.style.display='block';
+    else c.style.display='none';
+    c.querySelector('.full-content').classList.remove('expanded');
+    c.querySelector('.read-more').innerText='Read More ▼';
+  });
+}
+
+const track = document.querySelector('.carousel-track');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+const carouselCards = document.querySelectorAll('.case-card');
+
+let currentIndex = 0;
+const cardsPerPage = 3; // change how many cards are visible at once
+const gap = 20; // same as CSS gap
+
+function updateCarousel() {
+  const cardWidth = carouselCards[0].offsetWidth;
+  const offset = currentIndex * (cardWidth + gap);
+  track.style.transform = `translateX(-${offset}px)`;
+}
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = Math.max(0, currentIndex - cardsPerPage);
+  updateCarousel();
+});
+
+nextBtn.addEventListener('click', () => {
+  const maxIndex = carouselCards.length - cardsPerPage;
+  currentIndex = Math.min(maxIndex, currentIndex + cardsPerPage);
+  updateCarousel();
+});
+
+window.addEventListener('resize', updateCarousel);
