@@ -272,7 +272,7 @@ body, html {
   position: sticky;
   top: 0;
   width: 100%;
-  background: #F3F7F8;
+  background: #2A899C;
   color: #ffffff;
   display: flex;
   justify-content: center; /* center the content */
@@ -289,10 +289,6 @@ body, html {
   margin-right: 0; /* logo stays at left visually */
 }
 
-.logo img {
-  height: 10rem;
-}
-
 .navbar .nav-links {
   list-style: none;
   display: flex;
@@ -302,17 +298,14 @@ body, html {
 
 .navbar .nav-links li a {
   text-decoration: none;
-  color: #0E7A86;
+  color: #ffffff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .navbar .nav-links li a:hover {
   color: #196A7A;
-  text-decoration: underline;
 }
-
-
 
 /* RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
@@ -634,50 +627,3 @@ header {
 @media screen and (max-width: 600px) {
   .case-card { flex: 0 0 200px; }
 }
-
-
-/* Final tuned values — paste below existing rules */
-.video-container {
-  width: 100%;
-  max-width: 800px;       /* adjust if you want wider/narrower */
-  margin: 0 auto 80px;    /* keeps space before footer */
-  height: 150px;          /* SHORTER frame — reduce 'tall' look */
-  overflow: hidden;
-  border-radius: 12px;
-  position: relative;
-}
-
-/* Fill the frame but show more forehead (move visible area UP) */
-.video-container video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center 12%; /* <- move the frame UP (smaller % = show more forehead) */
-}
-
-/* responsive tweak: slightly shorten frame on small screens */
-@media (max-width: 600px) {
-  .video-container { 
-    height: 260px;
-    border-radius: 8px;
-    margin-bottom: 60px;
-  }
-  .video-container video { object-position: center 10%; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

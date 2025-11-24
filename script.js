@@ -173,3 +173,18 @@ nextBtn.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', updateCarousel);
+
+// Careers
+  const hasJobs = true; // true = show job openings, false = show 'no opportunities' message
+
+  const jobsGrid = document.getElementById("jobsGrid");
+  const noJobs = document.getElementById("noJobs");
+
+  if (hasJobs) {
+    jobsGrid.style.display = "grid";
+    noJobs.style.display = "none";
+  } else {
+    jobsGrid.style.display = "none";
+    noJobs.style.display = "block";
+  }
+ 
