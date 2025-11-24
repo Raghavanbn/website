@@ -1,0 +1,110 @@
+ body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f4f7fa;
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #2A899C, #196A7A);
+    color: #fff;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+  }
+
+  .content {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  .no-jobs {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .no-jobs h2 {
+    color: #196A7A;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .no-jobs p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  /* Job Cards */
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .job-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .job-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .job-title {
+    font-size: 1.5rem;
+    color: #196A7A;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .job-detail {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  .job-detail strong {
+    color: #2A899C;
+  }
+
+  .email-label {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #444;
+  }
+
+  .email-label strong {
+    color: #196A7A;
+  }
+
+  .due-date {
+    margin-top: 10px;
+    background: #196A7A;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  footer {
+    margin-top: 80px;
+    text-align: center;
+    background: #196A7A;
+    color: #fff;
+    padding: 25px 0;
+  }

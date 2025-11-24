@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events - EthixByte LLP</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="events.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Upcoming Events</h1>
+  <p>Discover our workshops, conferences, and networking sessions</p>
+</header>
+
+<!-- EVENTS GRID -->
+<main id="eventsGrid">
+  <section class="event-card">
+    <div class="event-date">March 15, 2025</div>
+    <div class="event-content">
+      <h2>Annual Tech Conference</h2>
+      <p>Explore latest technology innovations with industry leaders.</p>
+      <div class="join-btn">Register Now</div>
+    </div>
+</section>
+
+  <section class="event-card">
+    <div class="event-date">April 22, 2025</div>
+    <div class="event-content">
+      <h2>Healthcare Innovation Summit</h2>
+      <p>Shaping the future of medical technology & patient care.</p>
+      <div class="join-btn">Register Now</div>
+    </div>
+</section>
+
+  <section class="event-card">
+    <div class="event-date">June 10, 2025</div>
+    <div class="event-content">
+      <h2>FinTech Expo</h2>
+      <p>Discover the latest fintech solutions & blockchain innovations.</p>
+      <div class="join-btn">Register Now</div>
+    </div>
+</section>
+</main>
+
+<!-- NO EVENTS FALLBACK MESSAGE -->
+<section id="noEventsMessage">
+  <h2>No Events Scheduled Right Now</h2>
+  <p>
+    We're cooking up something exciting behind the scenes!  
+    Stay tuned for upcoming workshops, conferences, and meetups. 🚀
+  </p>
+</section>
+
+<!-- ---------- POPUP ---------- -->
+<section class="popup-overlay" id="popup">
+  <div class="popup-box" id="popupBox">
+    <h2>Register for Event</h2>
+    <input type="text" id="nameField" placeholder="Enter your name">
+    <input type="text" id="mobileField" placeholder="Enter mobile number">
+    <div class="popup-submit" id="submitBtn">Submit</div>
+  </div>
+</section>
+
+<script src="events.js"></script>
+
+</body>
+</html>
