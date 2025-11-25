@@ -1,226 +1,660 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EthixByte LLP</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EthixByte LLP</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .card-inner {
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+      .card-face {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      .card-back {
+        transform: rotateY(180deg);
+      }
+      .card.flipped > .card-inner {
+        transform: rotateY(180deg);
+      }
+      .fade-in-section.visible {
+        /* Do not remove*/
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
     <!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">
-    <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1761914312/logo_with_name_gkkyrt.webp" alt="Case Study 1">
-    
-  </div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#vision">Vision</a></li>
-    <li><a href="#mission">Mission</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#case-studies">Case Studies</a></li>
-    <li><a href="#insights">Resources</a></li>
-    <li><a href="#video">Our Story</a></li>
-  </ul>
-</nav>
-
-  <!-- HERO SECTION -->
-<section id="hero">
-  <h1 id="hero-text"></h1>
-  <p>Your trusted partner in delivering cutting-edge solutions.</p>
-</section>
-
-
-  <!-- ABOUT / MISSION / VISION WITH VERTICAL PROGRESS BAR -->
-  <section id="about" class="section fade-in-section">
-    <div class="about-container">
-      <div class="progress-bar">
-        <div class="progress"></div>
+    <nav
+      class="top-0 w-full bg-[#F3F7F8] text-white flex justify-center items-center py-[15px] px-[20px] z-[1000] shadow-md gap-[40px]"
+    >
+      <div class="logo text-[1.5rem] font-bold mr-0">
+        <img
+          src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1761914312/logo_with_name_gkkyrt.webp"
+          class="h-[10rem]"
+          alt="EthixByte LLP Logo"
+        />
       </div>
-      <div class="about-content">
-        <div class="tab active" data-index="0">
-          <h2>About Us</h2>
-          <p>Welcome to our little corner of the internet!</p>
 
-          <p>We’re a software company that loves solving problems—big ones, small ones, and the ones you didn’t even know were problems until they magically disappeared.</p>
-          <p>We design and build software, apps, systems, and all the digital things that make businesses run smoother. Whether it’s speeding up a slow platform, automating a boring workflow, or turning a cool idea into a real product, we’re all about making technology feel simple.</p>  
-          <p>We’re a small team with big energy—curious, creative, and caffeine-powered.</p>
-          <p>If you like straightforward solutions, honest communication, and people who enjoy geeking out over good code… you’re in the right place.</p>
+      <ul class="nav-links list-none flex justify-center gap-[25px]">
+        <li>
+          <a
+            href="#about"
+            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#vision"
+            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
+            >Vision</a
+          >
+        </li>
+        <li>
+          <a
+            href="#mission"
+            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
+            >Mission</a
+          >
+        </li>
+        <li>
+          <a
+            href="#services"
+            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="#case-studies"
+            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
+            >Case Studies</a
+          >
+        </li>
+        <li>
+          <a
+            href="#insights"
+            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
+            >Resources</a
+          >
+        </li>
+        <li>
+          <a
+            href="#video"
+            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
+            >Our Story</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section
+      id="hero"
+      class="bg-gradient-to-br from-[#2A899C] to-[#196A7A] text-white text-center py-[100px] px-[20px]"
+    >
+      <h1
+        class="text-[3rem] mb-[20px] whitespace-nowrap overflow-hidden"
+        id="hero-text"
+      ></h1>
+
+      <p class="text-[1.2rem]">
+        Your trusted partner in delivering cutting-edge solutions.
+      </p>
+    </section>
+
+    <!-- ABOUT / MISSION / VISION WITH VERTICAL PROGRESS BAR -->
+
+    <section id="about" class="section fade-in-section py-16">
+      <div class="max-w-[1000px] mx-auto flex gap-8">
+        <!-- Vertical Progress Bar -->
+        <div
+          class="w-[10px] bg-[#eee] rounded-[5px] overflow-hidden relative mr-[30px]"
+        >
+          <div
+            class="progress absolute bottom-0 left-0 w-full bg-[#3498db] transition-[height] duration-1000"
+            style="height: 0"
+          ></div>
         </div>
-        <div class="tab" data-index="1">
-          <h2>Our Mission</h2>
-          <p>We build smart software, apps, and systems that solve real problems. From development to testing, database management to maintenance, we’re here to make technology work for you—fast, reliable, and hassle-free.</p>
-          <p>From building products to testing, managing databases, and keeping everything running smoothly, we’ve got it covered.</p>
-          <p>Our goal is to make technology easy, reliable, and stress-free for businesses.</p>
-          <p>We focus on turning ideas into solutions that are practical, scalable, and a little fun to use.</p>
-          <p>At the end of the day, we’re here to help you get things done without the tech headaches.</p>
-          <p>We create software, apps, and systems that actually solve real problems—nothing fancy, just stuff that works.</p>
-        </div>
-        <div class="tab" data-index="2">
-          <h2>Our Vision</h2>
-          <p>We want technology to be simple, smart, and downright exciting for every business.</p>
-          <p>No more confusing tech headaches—just solutions that actually work and make life easier.</p>
-          <p>Our mission is to turn bright ideas into real products that grow and shine.</p>
-          <p>We believe tech should empower, not overwhelm, giving you more time to focus on what matters.</p>
-          <p>Flexible, reliable, and friendly—that’s how we like our technology.</p>
-          <p>At the end of the day, we make sure technology works for you, not the other way around.</p>
+
+        <!-- Tab Contents -->
+        <div class="flex-1 about-content">
+          <div class="tab active">
+            <h2 class="text-2xl font-bold mb-4">About Us</h2>
+            <p>Welcome to our little corner of the internet!</p>
+
+            <p>
+              We’re a software company that loves solving problems—big ones,
+              small ones, and the ones you didn’t even know were problems until
+              they magically disappeared.
+            </p>
+            <p>
+              We design and build software, apps, systems, and all the digital
+              things that make businesses run smoother. Whether it’s speeding up
+              a slow platform, automating a boring workflow, or turning a cool
+              idea into a real product, we’re all about making technology feel
+              simple.
+            </p>
+            <p>
+              We’re a small team with big energy—curious, creative, and
+              caffeine-powered.
+            </p>
+            <p>
+              If you like straightforward solutions, honest communication, and
+              people who enjoy geeking out over good code… you’re in the right
+              place.
+            </p>
+          </div>
+
+          <div class="tab hidden">
+            <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
+            <p>
+              We build smart software, apps, and systems that solve real
+              problems. From development to testing, database management to
+              maintenance, we’re here to make technology work for you—fast,
+              reliable, and hassle-free.
+            </p>
+            <p>
+              From building products to testing, managing databases, and keeping
+              everything running smoothly, we’ve got it covered.
+            </p>
+            <p>
+              Our goal is to make technology easy, reliable, and stress-free for
+              businesses.
+            </p>
+            <p>
+              We focus on turning ideas into solutions that are practical,
+              scalable, and a little fun to use.
+            </p>
+            <p>
+              At the end of the day, we’re here to help you get things done
+              without the tech headaches.
+            </p>
+            <p>
+              We create software, apps, and systems that actually solve real
+              problems—nothing fancy, just stuff that works.
+            </p>
+          </div>
+
+          <div class="tab hidden">
+            <h2 class="text-2xl font-bold mb-4">Our Vision</h2>
+            <p>
+              We want technology to be simple, smart, and downright exciting for
+              every business.
+            </p>
+            <p>
+              No more confusing tech headaches—just solutions that actually work
+              and make life easier.
+            </p>
+            <p>
+              Our mission is to turn bright ideas into real products that grow
+              and shine.
+            </p>
+            <p>
+              We believe tech should empower, not overwhelm, giving you more
+              time to focus on what matters.
+            </p>
+            <p>
+              Flexible, reliable, and friendly—that’s how we like our
+              technology.
+            </p>
+            <p>
+              At the end of the day, we make sure technology works for you, not
+              the other way around.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVICES SECTION -->
-  <section id="services" class="section fade-in-section">
-    <h2 class="section-title">Our Services</h2>
-    <div class="cards-container">
-      <div class="card">
-        <div class="front">
-          <h3>Product & Software Development</h3>
+    <!-- SERVICES SECTION -->
+
+    <!-- tiny CSS required for 3D / backface (minimal) -->
+
+    <!-- SERVICES (Tailwind) -->
+    <section id="services" class="section fade-in-section py-16">
+      <h2
+        class="section-title group w-fit mx-auto text-center text-2xl md:text-3xl font-bold mb-4 text-gray-800"
+      >
+        Our Services
+        <span
+          class="block w-[60px] h-[3px] bg-[#196A7A] mx-auto mt-[10px] rounded-[2px] transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
+        ></span>
+      </h2>
+
+      <div
+        class="cards-container flex justify-center flex-wrap gap-[50px] mt-6 px-4"
+      >
+        <!-- Card 1 -->
+        <div
+          class="card relative bg-white w-[250px] h-[250px] [perspective:1000px] cursor-pointer flex-shrink-0"
+        >
+          <div class="card-inner relative w-full h-full">
+            <div
+              class="card-face absolute inset-0 rounded-[10px] flex items-center justify-center p-[20px] text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)] transition-transform"
+              style="background: #3498db; color: #fff"
+            >
+              <h3 class="text-lg font-semibold">
+                Product &amp; Software Development
+              </h3>
+            </div>
+
+            <div
+              class="card-face absolute inset-0 rounded-[10px] flex items-center justify-center p-[20px] text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)]"
+              style="
+                background: #2a899c;
+                color: #fff;
+                transform: rotateY(180deg);
+              "
+            >
+              <div>
+                <p>
+                  Got an idea? We’ll help you build it—from sketch to launch.
+                  <br /><br />Web apps, mobile apps, custom tools… if it runs on
+                  code, we can create it.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="back">
-          <p>Got an idea? We’ll help you build it—from sketch to launch. <br/><br/>Web apps, mobile apps, custom tools… if it runs on code, we can create it.</p>
-          <p></p>
+
+        <!-- Card 2 -->
+        <div
+          class="card relative bg-white w-[250px] h-[250px] [perspective:1000px] cursor-pointer flex-shrink-0"
+        >
+          <div class="card-inner relative w-full h-full">
+            <div
+              class="card-face absolute inset-0 rounded-[10px] flex items-center justify-center p-[20px] text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)] transition-transform"
+              style="background: #3498db; color: #fff"
+            >
+              <h3 class="text-lg font-semibold">
+                Quality Assurance &amp; Testing
+              </h3>
+            </div>
+
+            <div
+              class="card-face absolute inset-0 rounded-[10px] flex items-center justify-center p-[20px] text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)]"
+              style="
+                background: #2a899c;
+                color: #fff;
+                transform: rotateY(180deg);
+              "
+            >
+              <div>
+                <p>
+                  We test everything. <br />
+                  <br />
+                  Because nobody likes bugs—except maybe bugs. <br /><br />
+                  Automated tests, manual tests, mysterious-edge-case tests…
+                  we’ve got it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="card relative bg-white w-[250px] h-[250px] [perspective:1000px] cursor-pointer flex-shrink-0"
+        >
+          <div class="card-inner relative w-full h-full">
+            <div
+              class="card-face absolute inset-0 rounded-[10px] flex items-center justify-center p-[20px] text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)] transition-transform"
+              style="background: #3498db; color: #fff"
+            >
+              <h3 class="text-lg font-semibold">Database Management</h3>
+            </div>
+
+            <div
+              class="card-face absolute inset-0 rounded-[10px] flex items-center justify-center p-[20px] text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)]"
+              style="
+                background: #2a899c;
+                color: #fff;
+                transform: rotateY(180deg);
+              "
+            >
+              <div>
+                <p>
+                  Slow database? Missing data? Weird errors? <br /><br />
+                  Don’t worry. <br />
+                  <br />We design, optimize, and maintain databases so your data
+                  stays fast, safe, and organized.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="card relative bg-white w-[250px] h-[250px] [perspective:1000px] cursor-pointer flex-shrink-0"
+        >
+          <div class="card-inner relative w-full h-full">
+            <div
+              class="card-face absolute inset-0 rounded-[10px] flex items-center justify-center p-[20px] text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)] transition-transform"
+              style="background: #3498db; color: #fff"
+            >
+              <h3 class="text-lg font-semibold">Maintenance &amp; Support</h3>
+            </div>
+
+            <div
+              class="card-face absolute inset-0 rounded-[10px] flex items-center justify-center p-[20px] text-center shadow-[0_5px_15px_rgba(0,0,0,0.1)]"
+              style="
+                background: #2a899c;
+                color: #fff;
+                transform: rotateY(180deg);
+              "
+            >
+              <div>
+                <p>
+                  Technology is never “done.” <br /><br />We keep your systems
+                  fresh, updated, secure, and running smoothly while you focus
+                  on business. <br /><br />
+                  Everything we build is clean, scalable, and future-friendly
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="front">
-          <h3>Quality Assurance & Testing</h3>
+    </section>
+
+    <!-- CASE STUDIES SECTION (Slide-Up Summary) -->
+
+    <section id="case-studies" class="section fade-in-section py-16">
+      <h2
+        class="section-title group w-fit mx-auto text-center text-2xl md:text-3xl font-bold mb-4 text-gray-800"
+      >
+        Case Studies
+        <span
+          class="block w-[60px] h-[3px] bg-[#196A7A] mx-auto mt-[10px] rounded-[2px] transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
+        ></span>
+      </h2>
+
+      <div
+        class="carousel-wrapper relative max-w-6xl mx-auto overflow-hidden px-4"
+      >
+        <!-- prev -->
+        <button
+          aria-label="Previous"
+          class="carousel-btn prev absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-[rgba(0,0,0,0.6)] text-white w-9 h-9 rounded-full flex items-center justify-center"
+        >
+          &lsaquo;
+        </button>
+
+        <div
+          class="carousel-track flex gap-[20px] transition-transform duration-300"
+        >
+          <article
+            class="case-card group flex-none w-[300px] h-[200px] rounded-[10px] bg-white shadow-lg overflow-hidden relative cursor-pointer"
+          >
+            <img
+              src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815238/insurance-911819_640_bpdsnx.webp"
+              alt="Insurance"
+              class="w-[12rem] h-[13rem] object-cover block mx-auto"
+            />
+            <div
+              class="case-summary absolute left-0 right-0 bottom-0 bg-[rgba(52,152,219,0.85)] text-white p-5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+            >
+              <h3 class="font-semibold text-lg mb-2">
+                Claims Automation System
+              </h3>
+              <p class="text-sm">
+                Streamlined claims processing with faster, error-free
+                settlements.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="case-card group flex-none w-[300px] h-[200px] rounded-[10px] bg-white shadow-lg overflow-hidden relative cursor-pointer"
+          >
+            <img
+              src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815239/vitamins-26622_640_nrgshx.webp"
+              alt="Healthcare"
+              class="w-[12rem] h-[13rem] object-cover block mx-auto"
+            />
+            <div
+              class="case-summary absolute left-0 right-0 bottom-0 bg-[rgba(52,152,219,0.85)] text-white p-5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+            >
+              <h3 class="font-semibold text-lg mb-2">
+                Patient &amp; Appointment Mgmt
+              </h3>
+              <p class="text-sm">
+                Unified system for quick access to patient data and simplified
+                appointments
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="case-card group flex-none w-[300px] h-[200px] rounded-[10px] bg-white shadow-lg overflow-hidden relative cursor-pointer"
+          >
+            <img
+              src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815238/cellphone-5459713_640-removebg-preview_yhovdd.webp"
+              alt="Banking"
+              class="w-[12rem] h-[13rem] object-cover block mx-auto"
+            />
+            <div
+              class="case-summary absolute left-0 right-0 bottom-0 bg-[rgba(52,152,219,0.85)] text-white p-5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+            >
+              <h3 class="font-semibold text-lg mb-2">Online Banking Portal</h3>
+              <p class="text-sm">
+                Upgraded banking platform for speed, reliability, and
+                user-friendly experience.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="case-card group flex-none w-[300px] h-[200px] rounded-[10px] bg-white shadow-lg overflow-hidden relative cursor-pointer"
+          >
+            <img
+              src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815239/tv-1015427_640_tr2kzi.webp"
+              alt="Media"
+              class="w-[12rem] h-[13rem] object-cover block mx-auto"
+            />
+            <div
+              class="case-summary absolute left-0 right-0 bottom-0 bg-[rgba(52,152,219,0.85)] text-white p-5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+            >
+              <h3 class="font-semibold text-lg mb-2">
+                Content Delivery Platform
+              </h3>
+              <p class="text-sm">
+                Scalable content platform engineered for massive live-event
+                traffic.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="case-card group flex-none w-[300px] h-[200px] rounded-[10px] bg-white shadow-lg overflow-hidden relative cursor-pointer"
+          >
+            <img
+              src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815239/woman-4495395_640_kiwblk.webp"
+              alt="Retail"
+              class="w-[12rem] h-[13rem] object-cover block mx-auto"
+            />
+            <div
+              class="case-summary absolute left-0 right-0 bottom-0 bg-[rgba(52,152,219,0.85)] text-white p-5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+            >
+              <h3 class="font-semibold text-lg mb-2">E-Commerce Automation</h3>
+              <p class="text-sm">
+                Integrated system to track inventory and prevent stock
+                shortages.
+              </p>
+            </div>
+          </article>
         </div>
-        <div class="back">
-          <p>We test everything. <br/> <br/> Because nobody likes bugs—except maybe bugs. <br/><br/> Automated tests, manual tests, mysterious-edge-case tests… we’ve got it.</p>
+
+        <!-- next -->
+        <button
+          aria-label="Next"
+          class="carousel-btn next absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-[rgba(0,0,0,0.6)] text-white w-9 h-9 rounded-full flex items-center justify-center"
+        >
+          &rsaquo;
+        </button>
+      </div>
+    </section>
+
+    <!-- INSIGHTS SECTION (Hover Zoom) -->
+
+    <section
+      id="insights"
+      class="section fade-in-section py-16 bg-gradient-to-br from-[#2A899C1A] to-[#196A7A1A] relative overflow-hidden"
+    >
+      <h2
+        class="section-title group w-fit mx-auto text-center text-2xl md:text-3xl font-bold mb-4 text-gray-800"
+      >
+        Resources
+        <span
+          class="block w-[60px] h-[3px] bg-[#196A7A] mx-auto mt-[10px] rounded-[2px] transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
+        ></span>
+      </h2>
+
+      <div class="insights-container flex justify-center flex-wrap gap-8 px-4">
+        <!-- Card 1 -->
+        <div
+          class="insight-card w-[250px] rounded-[10px] overflow-hidden bg-white cursor-pointer transform transition-transform duration-300 hover:scale-105 text-center shadow-md"
+        >
+          <img
+            src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1718397723/ethixbyte/IMG_1200_gqzjem.jpg"
+            alt="Blog"
+            class="w-full h-[150px] object-cover"
+          />
+          <h3 class="text-lg font-semibold py-3">Blog</h3>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="insight-card w-[250px] rounded-[10px] overflow-hidden bg-white cursor-pointer transform transition-transform duration-300 hover:scale-105 text-center shadow-md"
+        >
+          <img
+            src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1722442928/expertise_ra7wes_xpdr0m.webp"
+            alt="Careers"
+            class="w-full h-[150px] object-cover"
+          />
+          <h3 class="text-lg font-semibold py-3">Careers</h3>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="insight-card w-[250px] rounded-[10px] overflow-hidden bg-white cursor-pointer transform transition-transform duration-300 hover:scale-105 text-center shadow-md"
+        >
+          <img
+            src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1702898588/samples/people/jazz.jpg"
+            alt="Events"
+            class="w-full h-[150px] object-cover"
+          />
+          <h3 class="text-lg font-semibold py-3">Event</h3>
         </div>
       </div>
-      <div class="card">
-        <div class="front">
-          <h3>Database Management</h3>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section
+      id="video"
+      class="section fade-in-section py-[60px] px-[20px] bg-[#f9f9f9] text-center"
+    >
+      <h2
+        class="section-title group w-fit mx-auto text-center text-2xl md:text-3xl font-bold mb-4 text-gray-800"
+      >
+        Our Story
+        <span
+          class="block w-[60px] h-[3px] bg-[#196A7A] mx-auto mt-[10px] rounded-[2px] transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
+        ></span>
+      </h2>
+      <div
+        class="relative w-[90%] max-w-[1000px] mx-auto pb-[42%] h-0 overflow-hidden rounded-[10px] shadow-[0_5px_20px_rgba(0,0,0,0.2)]"
+      >
+        <video
+          autoplay
+          muted
+          controls
+          class="absolute inset-0 w-full h-full object-cover object-[center_15%] rounded-[10px]"
+        >
+          <source src="videos/ethixbyte.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <footer class="bg-[#2A899C] text-white py-10 px-5 text-center">
+      <!-- Footer Container -->
+      <div
+        class="max-w-[1200px] mx-auto flex flex-wrap justify-between gap-5 md:justify-center md:text-center"
+      >
+        <!-- Column 1 -->
+        <div class="flex-1 min-w-[200px]">
+          <h3 class="mb-4 text-[1.2rem] font-semibold">About EthixByte LLP</h3>
+          <p class="text-[0.95rem]">
+            Innovating solutions for businesses and startups worldwide.
+          </p>
         </div>
-        <div class="back">
-          <p>Slow database? Missing data? Weird errors? <br/><br/> Don’t worry. <br/> <br/>We design, optimize, and maintain databases so your data stays fast, safe, and organized.</p>
+
+        <!-- Column 2 -->
+        <div class="flex-1 min-w-[200px]">
+          <h3 class="mb-4 text-[1.2rem] font-semibold">Quick Links</h3>
+          <ul class="space-y-2 text-[0.95rem]">
+            <li>
+              <a
+                href="#hero"
+                class="footer-link transition-colors hover:underline"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="footer-link transition-colors hover:underline"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#insights"
+                class="footer-link transition-colors hover:underline"
+                >Insights</a
+              >
+            </li>
+            <li>
+              <a
+                href="#case-studies"
+                class="footer-link transition-colors hover:underline"
+                >Case Studies</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="flex-1 min-w-[200px]">
+          <h3 class="mb-4 text-[1.2rem] font-semibold">Contact</h3>
+          <p class="text-[0.95rem]">Email: info@ethixbyte.com</p>
+          <p class="text-[0.95rem]">Phone: +1 234 567 890</p>
+          <p class="text-[0.95rem]">Address: Perumbakkam, Chennai</p>
         </div>
       </div>
-      <div class="card">
-        <div class="front">
-          <h3>Maintenance & Support</h3>
-        </div>
-        <div class="back">
-          <p>Technology is never “done.” <br/><br/>We keep your systems fresh, updated, secure, and running smoothly while you focus on business. <br/><br/> Everything we build is clean, scalable, and future-friendly—just the way good software should be.</p>
-        </div>
+
+      <!-- Bottom Section -->
+      <div class="mt-8 border-t border-white/30 pt-4 text-[0.85rem]">
+        &copy; 2025 EthixByte LLP. All Rights Reserved.
+
+        <button
+          onclick="scrollToTop()"
+          class="ml-4 bg-transparent border border-white text-white rounded-md px-3 py-1 text-[0.85rem] transition-all hover:bg-[#196A7A] hover:border-[#196A7A]"
+        >
+          Go to Top ↑
+        </button>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- CASE STUDIES SECTION (Slide-Up Summary) -->
-<section id="case-studies" class="section fade-in-section">
-  <h2 class="section-title">Case Studies</h2>
-  <div class="carousel-wrapper">
-    <button class="carousel-btn prev">&lsaquo;</button>
-    <div class="carousel-track">
-      <div class="case-card">
-        <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815238/insurance-911819_640_bpdsnx.webp" alt="Insurance">
-        <div class="case-summary">
-          <h3>Claims Automation System</h3>
-          <p>Streamlined claims processing with faster, error-free settlements.</p>
-        </div>
-      </div>
-      <div class="case-card">
-        <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815239/vitamins-26622_640_nrgshx.webp" alt="Healthcare">
-        <div class="case-summary">
-          <h3>Patient & Appointment Mgmt</h3>
-          <p>Unified system for quick access to patient data and simplified appointments</p>
-        </div>
-      </div>
-      <div class="case-card">
-        <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815238/cellphone-5459713_640-removebg-preview_yhovdd.webp" alt="Banking">
-        <div class="case-summary">
-          <h3>Online Banking Portal</h3>
-          <p>Upgraded banking platform for speed, reliability, and user-friendly experience.</p>
-        </div>
-      </div>
-      <div class="case-card">
-        <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815239/tv-1015427_640_tr2kzi.webp" alt="Media">
-        <div class="case-summary">
-          <h3>Content Delivery Platform</h3>
-          <p>Scalable content platform engineered for massive live-event traffic.</p>
-        </div>
-      </div>
-      <div class="case-card">
-        <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815239/woman-4495395_640_kiwblk.webp" alt="Retail">
-        <div class="case-summary">
-          <h3>E-Commerce Automation</h3>
-          <p>Integrated system to track inventory and prevent stock shortages.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-btn next">&rsaquo;</button>
-  </div>
-</section>
-
-
-
-
-
-
-
-  <!-- INSIGHTS SECTION (Hover Zoom) -->
-  <section id="insights" class="section fade-in-section">
-    <h2 class="section-title">Resources</h2>
-    <div class="insights-container">
-      <div class="insight-card">
-        <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1718397723/ethixbyte/IMG_1200_gqzjem.jpg" alt="Blog">
-        <h3>Blog</h3>
-      </div>
-      <div class="insight-card">
-        <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1722442928/expertise_ra7wes_xpdr0m.webp" alt="Careers">
-        <h3>Careers</h3>
-      </div>
-      <div class="insight-card">
-        <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1702898588/samples/people/jazz.jpg" alt="Events">
-        <h3>Event</h3>
-      </div>
-    </div>
-    
-  </section>
-
-  <!-- VIDEO SECTION -->
-<section id="video" class="section fade-in-section">
-  <h2 class="section-title">Watch Our Story</h2>
-  <div class="video-container">
-    <video autoplay muted controls>
-      <source src="videos/ethixbyte.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</section>
-<footer>
-  <div class="footer-container">
-    <div class="footer-column">
-      <h3>About Startup LLP</h3>
-      <p>Innovating solutions for businesses and startups worldwide.</p>
-    </div>
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <p><a href="#hero">Home</a></p>
-      <p><a href="#services">Services</a></p>
-      <p><a href="#insights">Insights</a></p>
-      <p><a href="#case-studies">Case Studies</a></p>
-    </div>
-    <div class="footer-column">
-      <h3>Contact</h3>
-      <p>Email: info@ethixbyte.com</p>
-      <p>Phone: +1 234 567 890</p>
-      <p>Address: Perumbakkam, Chennai</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2025 Startup LLP. All Rights Reserved.
-    <button class="go-top" onclick="scrollToTop()">Go to Top ↑</button>
-  </div>
-
-
-</footer>
-
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
