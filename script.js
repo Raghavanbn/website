@@ -37,10 +37,17 @@ const progress = document.querySelector('.progress');
 let index = 0;
 
 function showTab(i){
-  tabs.forEach(tab => tab.classList.remove('active'));
+  tabs.forEach((tab, idx) => {
+    tab.classList.remove('active');
+    tab.classList.add('hidden');     // hide all
+  });
+
   tabs[i].classList.add('active');
+  tabs[i].classList.remove('hidden'); // show active tab
+
   progress.style.height = `${((i+1)/tabs.length)*100}%`;
 }
+
 
 showTab(index);
 
@@ -146,6 +153,7 @@ function filterCategory(category){
   });
 }
 
+// Case Studies Carousel
 const track = document.querySelector('.carousel-track');
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');

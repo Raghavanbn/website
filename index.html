@@ -31,84 +31,107 @@
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav
-      class="top-0 w-full bg-[#F3F7F8] text-white flex justify-center items-center py-[15px] px-[20px] z-[1000] shadow-md gap-[40px]"
-    >
-      <div class="logo text-[1.5rem] font-bold mr-0">
-        <img
-          src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1761914312/logo_with_name_gkkyrt.webp"
-          class="h-[10rem]"
-          alt="EthixByte LLP Logo"
-        />
-      </div>
+     
+  
 
-      <ul class="nav-links list-none flex justify-center gap-[25px]">
-        <li>
-          <a
-            href="#about"
-            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            href="#vision"
-            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
-            >Vision</a
-          >
-        </li>
-        <li>
-          <a
-            href="#mission"
-            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
-            >Mission</a
-          >
-        </li>
-        <li>
-          <a
-            href="#services"
-            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
-            >Services</a
-          >
-        </li>
-        <li>
-          <a
-            href="#case-studies"
-            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
-            >Case Studies</a
-          >
-        </li>
-        <li>
-          <a
-            href="#insights"
-            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
-            >Resources</a
-          >
-        </li>
-        <li>
-          <a
-            href="#video"
-            class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline"
-            >Our Story</a
-          >
-        </li>
-      </ul>
-    </nav>
+<!--src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1761914312/logo_with_name_gkkyrt.webp"-->
+
+    <!-- Responsive fixed navbar -->
+<!-- NAVBAR (copy/paste) -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+      <img
+        src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1761914312/logo_with_name_gkkyrt.webp"
+        alt="EthixByte Logo"
+        class="h-10 object-contain" style="height: 5rem;"
+      />
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="hidden md:flex md:items-center md:space-x-6">
+      <a href="#about" class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline">About</a>
+      <a href="#about" class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline">Vision</a>
+      <a href="#about" class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline">Mission</a>
+      <a href="#services" class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline">Services</a>
+      <a href="#case-studies" class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline">Case Studies</a>
+      <a href="#insights" class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline">Resources</a>
+      <a href="#video" class="text-[#0E7A86] font-medium hover:text-[#196A7A] hover:underline">Our Story</a>
+    </div>
+
+    <!-- Hamburger (ALWAYS FIXED INSIDE NAV, NEVER MOVES) -->
+    <button
+      id="hamburger"
+      class="md:hidden absolute right-4 top-1/2 -translate-y-1/2 p-2 border border-[#0E7A86] rounded bg-white"
+    >
+      <svg class="h-6 w-6 text-[#0E7A86]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU (OVERLAY – DOES NOT PUSH LAYOUT) -->
+  <div id="mobileMenu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md z-40">
+    <a href="#about" class="block py-3 px-6 text-[#0E7A86] font-medium hover:bg-[#F3F7F8]">About</a>
+    <a href="#about" class="block py-3 px-6 text-[#0E7A86] font-medium hover:bg-[#F3F7F8]">Vision</a>
+    <a href="#about" class="block py-3 px-6 text-[#0E7A86] font-medium hover:bg-[#F3F7F8]">Mission</a>
+    <a href="#services" class="block py-3 px-6 text-[#0E7A86] font-medium hover:bg-[#F3F7F8]">Services</a>
+    <a href="#case-studies" class="block py-3 px-6 text-[#0E7A86] font-medium hover:bg-[#F3F7F8]">Case Studies</a>
+    <a href="#insights" class="block py-3 px-6 text-[#0E7A86] font-medium hover:bg-[#F3F7F8]">Resources</a>
+    <a href="#video" class="block py-3 px-6 text-[#0E7A86] font-medium hover:bg-[#F3F7F8]">Our Story</a>
+  </div>
+</nav>
+
+<!-- Spacer to prevent hero overlap -->
+<div class="h-16"></div>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // close when clicking any link
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => menu.classList.add('hidden'));
+  });
+</script>
+
+
+
+
+
 
     <!-- HERO SECTION -->
-    <section
-      id="hero"
-      class="bg-gradient-to-br from-[#2A899C] to-[#196A7A] text-white text-center py-[100px] px-[20px]"
-    >
-      <h1
+
+
+<section id="hero" class="relative w-full overflow-visible">
+  <!-- Responsive image: keep aspect ratio, no cropping -->
+  <img src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1762257951/hero-image_qzb254.webp"
+    alt="hero"
+    class="w-full h-auto block"
+  />
+
+  <!-- Absolute text overlay -->
+  <div class="absolute top-1/2 left-0 transform -translate-y-1/2 px-6 md:px-16 text-white z-20">
+   <h1
         class="text-[3rem] mb-[20px] whitespace-nowrap overflow-hidden"
         id="hero-text"
       ></h1>
 
-      <p class="text-[1.2rem]">
-        Your trusted partner in delivering cutting-edge solutions.
-      </p>
-    </section>
+    <p class="text-[1.05rem] md:text-[1.15rem] mt-4 max-w-[780px]">
+      Your trusted partner in delivering cutting-edge solutions.
+    </p>
+  </div>
+</section>
+
+
+
 
     <!-- ABOUT / MISSION / VISION WITH VERTICAL PROGRESS BAR -->
 
@@ -126,7 +149,7 @@
 
         <!-- Tab Contents -->
         <div class="flex-1 about-content">
-          <div class="tab active">
+          <div class="tab active space-y-4 leading-relaxed" data-index="0">
             <h2 class="text-2xl font-bold mb-4">About Us</h2>
             <p>Welcome to our little corner of the internet!</p>
 
@@ -153,7 +176,7 @@
             </p>
           </div>
 
-          <div class="tab hidden">
+          <div class="tab hidden space-y-4 leading-relaxed" data-index="1">
             <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
             <p>
               We build smart software, apps, and systems that solve real
@@ -183,7 +206,7 @@
             </p>
           </div>
 
-          <div class="tab hidden">
+          <div class="tab hidden space-y-4 leading-relaxed" data-index="2">
             <h2 class="text-2xl font-bold mb-4">Our Vision</h2>
             <p>
               We want technology to be simple, smart, and downright exciting for
@@ -417,7 +440,7 @@
             class="case-card group flex-none w-[300px] h-[200px] rounded-[10px] bg-white shadow-lg overflow-hidden relative cursor-pointer"
           >
             <img
-              src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1763815239/vitamins-26622_640_nrgshx.webp"
+              src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1764078427/ChatGPT_Image_Nov_25_2025_07_13_03_PM_1_hb066h.webp"
               alt="Healthcare"
               class="w-[12rem] h-[13rem] object-cover block mx-auto"
             />
@@ -525,7 +548,7 @@
           class="insight-card w-[250px] rounded-[10px] overflow-hidden bg-white cursor-pointer transform transition-transform duration-300 hover:scale-105 text-center shadow-md"
         >
           <img
-            src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1718397723/ethixbyte/IMG_1200_gqzjem.jpg"
+            src="https://res.cloudinary.com/dmr5qmocg/image/upload/v1764078877/ChatGPT_Image_Nov_25_2025_07_23_52_PM_gqdntp.webp"
             alt="Blog"
             class="w-full h-[150px] object-cover"
           />
@@ -580,7 +603,7 @@
           controls
           class="absolute inset-0 w-full h-full object-cover object-[center_15%] rounded-[10px]"
         >
-          <source src="videos/ethixbyte.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dmr5qmocg/video/upload/v1764085184/ethixbyte_ygyjf6.mp4" type="video/mp4" />
         </video>
       </div>
     </section>
@@ -620,7 +643,7 @@
               <a
                 href="#insights"
                 class="footer-link transition-colors hover:underline"
-                >Insights</a
+                >Resources</a
               >
             </li>
             <li>
